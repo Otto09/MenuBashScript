@@ -1,5 +1,4 @@
-# This function add, subtract, multiply and divide floating numbers
-# using bash calculator command
+
 #!/bin/bash
 while true
 
