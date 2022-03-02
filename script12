@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# df command show the amount of free disk space available
+# du command estimate file space usage
+# date command is used to display the system date and time
+
+my_array=(df du date)
+
+for command in "${my_array[@]}"
+do
+         $command
+done
+

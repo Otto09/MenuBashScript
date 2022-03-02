@@ -1,0 +1,11 @@
+#!/bin/bash
+my_array=(whoami pwd dir)
+
+# whoami displays the username of the current user
+# pwd prints the working directory
+# dir lists directory contents
+
+for command in "${my_array[@]}"
+do
+	 $command
+done

@@ -1,0 +1,22 @@
+#!/bin/bash
+clear 
+
+echo -n "choose ifconfig / free / clear: "
+read choose
+	if [ $choose = "ifconfig" ]
+		then
+		  # If no arguments are given, ifconfig displays the status of the system's
+		  # active interfaces.
+		  ifconfig
+        elif [ $choose = "free" ]
+                then
+                  # free display memory usage
+                  free
+	elif [ $choose = "clear" ]
+		then
+		  # clear command will clear the terminal screen
+		  clear
+	else
+		echo  "Invalid value"
+	fi
+

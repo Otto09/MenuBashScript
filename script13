@@ -1,0 +1,12 @@
+#!/bin/bash
+my_array=(groups hostname id)
+
+# groups print group names a user is in
+# hostname print system name
+# id print user and group id’s
+
+for command in "${my_array[@]}"
+do
+         $command
+done
+

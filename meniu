@@ -1,0 +1,55 @@
+# This function add, subtract, multiply and divide floating numbers
+# using bash calculator command
+#!/bin/bash
+while true
+
+# disable ^C
+trap '' 2
+
+do
+        clear
+        echo "Menu BASH SCRIPTING"
+        echo "----------------------------------------------------------------- ----"
+        echo "Choose one of the following options:"
+        echo "[1] Who am I, print the working directory and directory contents [1]: "
+        echo "[2] Show free disk space, disk space usage and day, date and time [2]: "
+	echo "[3] Show configuration of interfaces or memory usage or clear the screen [3]: "
+	echo "[4] Print group names, system name and user and group id’s [4]: "
+        echo "[5] Exit [5]: "
+        
+	# new line
+	echo -e "\n"
+        
+	echo -e  "Enter your selection \c "
+        
+	# read from keyboard
+	read answer
+        
+	case "$answer" in
+		# whoami displays the username of the current user
+		# pwd prints the working directory
+		# dir list directory contents
+		[1]) ./script11 ;;
+
+		# df command show the amount of free disk space available 
+		# du command estimate file space usage
+                # date command is used to display the system date and time
+		[2]) ./script12 ;;
+
+		# ifconfig displays the configuration of all active interfaces
+		# free displays memory usage
+		# clear command will clear the terminal screen
+		[3]) ./script10 ;;
+
+		# groups print group names a user is in
+		# hostname print system name
+		# id print user and group id’s
+		[4]) ./script13 ;;
+
+		# exit command will exit the shell 
+                [5]) exit ;;
+        esac
+        echo -e "Enter return to continue \c"
+        read input
+done
+
